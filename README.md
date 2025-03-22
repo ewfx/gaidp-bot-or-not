@@ -43,6 +43,7 @@ Describe the major technical or non-technical challenges your team encountered.
 2. Run the commands
    ```sh
    python -m venv venv
+   
    .\venv\Scripts\activate
    ```
 3. Install dependencies  
@@ -51,14 +52,14 @@ Describe the major technical or non-technical challenges your team encountered.
    ```
 3. Run the project  
    ```sh
-   // to be added
+   python run.py
    ```
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
+- 🔹 Frontend: Streamlit
+- 🔹 Backend: Python
 - 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Other: Deepseek-r1
 
 ## 👥 Team
 - **Your Name** - [GitHub](#) | [LinkedIn](#)
