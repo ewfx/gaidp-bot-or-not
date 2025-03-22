@@ -40,13 +40,18 @@ Describe the major technical or non-technical challenges your team encountered.
    ```sh
    git clone https://github.com/your-repo.git
    ```
-2. Install dependencies  
+2. Run the commands
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   python -m venv venv
+   .\venv\Scripts\activate
+   ```
+3. Install dependencies  
+   ```sh
+   pip install -r requirements.txt
    ```
 3. Run the project  
    ```sh
-   npm start  # or python app.py
+   // to be added
    ```
 
 ## 🏗️ Tech Stack
