@@ -43,11 +43,11 @@ Describe the major technical or non-technical challenges your team encountered.
 2. Run the commands
    ```sh
    python -m venv venv
-   source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+   .\venv\Scripts\activate
    ```
 3. Install dependencies  
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   pip install -r requirements.txt
    ```
 3. Run the project  
    ```sh
