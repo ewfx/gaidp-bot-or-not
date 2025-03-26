@@ -67,6 +67,7 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
    ```
 2. Run the commands
    ```sh
+   cd code
    python -m venv venv
    .\venv\Scripts\activate
    ```
