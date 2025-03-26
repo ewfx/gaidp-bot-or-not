@@ -15,11 +15,14 @@
 ## 🎯 Introduction <a name="introduction"></a>
 In the banking sector, regulatory compliance demands rigorous validation of transaction data against complex rules—a process often bogged down by manual effort and human error. Our Data Profiling Gen AI project revolutionizes this workflow by automating rule extraction and anomaly detection.
 
-## 🎥 Demo <a name="demo"></a>
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
-🖼️ Screenshots:
+## 🎥 Demo <a name="demo"></a>  
+📹 [Video Demo](https://reccloud.com/u/b5u5y1v) 
 
+#### 🖼️ Screenshots of the Dashboard:
+![image](https://github.com/user-attachments/assets/69420d46-f6c1-453f-bbb8-428b95f16401)
+
+
+#### 🖼️ Flow Diagram :
 ![image](https://github.com/user-attachments/assets/4ff815e6-935a-46c0-bf93-c5738050b003)
 
 
@@ -67,8 +70,8 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
    ```
 2. Run the commands
    ```sh
+   cd code
    python -m venv venv
-   
    .\venv\Scripts\activate
    ```
 3. Install dependencies  
@@ -77,7 +80,8 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
    ```
 3. Run the project  
    ```sh
-   python run.py
+   cd /src/app
+   streamlit run app.py
    ```
 
 ## 🏗️ Tech Stack <a name="tech-stack"></a>
@@ -86,7 +90,7 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
 - 🔹 Gen-AI: Deepseek-r1
 
 ## 👥 Team <a name="team"></a>
-- **Pulkit Gupta** - [GitHub](#)
-- **Sakshi Jain** - [GitHub](#)
+- **Pulkit Gupta** - [GitHub](https://github.com/Pulgit555)
+- **Sakshi Jain** - [GitHub](https://github.com/sakshijain009/)
 - **Madhurim Gupta** - [GitHub](#)
-- **Rudra Pujara** - [GitHub](#) 
+- **Rudra Pujara** - [GitHub](https://github.com/rpinversion) 
