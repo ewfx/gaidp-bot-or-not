@@ -12,17 +12,17 @@
 - [Team](#team)
 
 
-## 🎯 Introduction
+## 🎯 Introduction <a name="introduction"></a>
 In the banking sector, regulatory compliance demands rigorous validation of transaction data against complex rules—a process often bogged down by manual effort and human error. Our Data Profiling Gen AI project revolutionizes this workflow by automating rule extraction and anomaly detection.
 
-## 🎥 Demo
+## 🎥 Demo <a name="demo"></a>
 🔗 [Live Demo](#) (if applicable)  
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
 ![Screenshot 1](link-to-image)
 
-## 💡 Inspiration
+## 💡 Inspiration <a name="inspiration"></a>
 In the banking sector, regulatory reporting demands meticulous compilation of vast data volumes to ensure compliance. Data profiling plays a pivotal role in this process, verifying that reported data adheres to strict regulatory guidelines. Traditionally, this task relies on manual efforts—profiling rules are painstakingly defined based on raw data and regulatory documents, a process that is time-consuming, error-prone, and inefficient.
 
 _Why we built an AI-powered Data Profiler?_
@@ -35,7 +35,7 @@ _Why we built an AI-powered Data Profiler?_
 
 By leveraging AI, we transform regulatory reporting from a reactive, cumbersome task into a proactive, streamlined workflow—ensuring compliance with precision and agility.
 
-## ⚙️ What It Does
+## ⚙️ What It Does <a name="what-it-does"></a>
 Here’s how our Data Profiling tool works:
 
 - ✅ Rule Extraction: Upload a PDF containing regulatory guidelines or compliance rules. Our system leverages DeepSeek R1 to intelligently extract and structure the most critical profiling rules.
@@ -44,10 +44,10 @@ Here’s how our Data Profiling tool works:
 
 Say goodbye to manual rule-mapping and embrace AI-driven compliance that’s faster, smarter, and error-free. 🚀
 
-## 🛠️ How We Built It
+## 🛠️ How We Built It <a name="how-we-built-it"></a>
 Our solution is built on a robust Python backend, leveraging Streamlit for an intuitive frontend interface that lets users upload PDFs and visualize compliance results seamlessly. At its core, DeepSeek R1 processes regulatory documents to extract and refine rules, while libraries like Pandas enable efficient data wrangling and anomaly detection on transaction datasets.
 
-## 🚧 Challenges We Faced
+## 🚧 Challenges We Faced <a name="challenges-we-faced"></a>
 Developing an automated system to extract compliance rules from regulatory PDFs and validate transaction data came with its fair share of hurdles. Here are some key challenges we tackled:
 
 - Rule Extraction from Complex PDFs
@@ -59,7 +59,7 @@ Not all rules are explicitly stated—some require implicit logic (e.g., "transa
 - Mapping Rules to Transaction Data
 Extracted rules needed precise translation into executable code (SQL, JSON, or validation logic).
 
-## 🏃 How to Run
+## 🏃 How to Run <a name="how-to-run"></a>
 1. Clone the repository  
    ```sh
    git clone https://github.com/your-repo.git
@@ -79,13 +79,13 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
    python run.py
    ```
 
-## 🏗️ Tech Stack
+## 🏗️ Tech Stack <a name="tech-stack"></a>
 - 🔹 Frontend: Streamlit
 - 🔹 Backend: Python
 - 🔹 Gen-AI: Deepseek-r1
 
-## 👥 Team
-- **Pulkit Gupta** - [GitHub](#) | [LinkedIn](#)
-- **Sakshi Jain** - [GitHub](#) | [LinkedIn](#)
-- **Madhurim Gupta** - [GitHub](#) | [LinkedIn](#)
-- **Rudra Pujara** - [GitHub](#) | [LinkedIn](#)
+## 👥 Team <a name="team"></a>
+- **Pulkit Gupta** - [GitHub](#)
+- **Sakshi Jain** - [GitHub](#)
+- **Madhurim Gupta** - [GitHub](#)
+- **Rudra Pujara** - [GitHub](#) 
