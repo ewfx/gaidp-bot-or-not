@@ -2,6 +2,7 @@ import streamlit as st
 import backend.update_rules as update_rules
 import backend.extract_rules as extract_rules
 import backend.detect_anomaly as anomaly
+import pandas as pd
 
 # Initialize rules in session state only once
 if "rules" not in st.session_state:
@@ -34,7 +35,23 @@ if csv_file:
     with st.spinner("Analyzing data for anomalies..."):
         anomalies = anomaly.detect_anomalies(csv_file, st.session_state.rules)
         st.success("✅ Anomalies detected!")
-        st.text(anomalies)
+        df = pd.DataFrame(anomalies)
+
+        # Display in Streamlit
+        st.dataframe(
+            df,
+            column_order=["transaction_id", "anomaly_detected", "Reason"],
+            hide_index=True,
+            use_container_width=True
+        )
+
+        # Optional: Add download button
+        st.download_button(
+            label="Download as CSV",
+            data=df.to_csv(index=False).encode('utf-8'),
+            file_name='anomaly_report.csv',
+            mime='text/csv'
+        )
 
 # Chat-based Rule Updating
 st.sidebar.header("Step 3: Add More Rules (Chat)")
