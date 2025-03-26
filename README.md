@@ -68,7 +68,6 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
 2. Run the commands
    ```sh
    python -m venv venv
-   
    .\venv\Scripts\activate
    ```
 3. Install dependencies  
@@ -77,7 +76,8 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
    ```
 3. Run the project  
    ```sh
-   python run.py
+   cd code/src/app
+   streamlit run app.py
    ```
 
 ## 🏗️ Tech Stack <a name="tech-stack"></a>
