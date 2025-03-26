@@ -5,7 +5,6 @@ import ollama
 import re
 import pdfplumber
 
-RULES_FILE = "rules.json"
 
 def extract_rules_from_pdf(pdf_file):
     """Extract rules from a PDF using Ollama and store them in a JSON file."""
@@ -19,9 +18,20 @@ def extract_rules_from_pdf(pdf_file):
     text = extract_text_from_pdf(pdf_path)
     print(text)
     # text = str(text) if text else "" 
+    
     prompt = f"""
-    Extract data profiling rules from the following document. 
-    Return the response strictly as a valid JSON object with key-value pairs.
+    You are an expert in financial transaction compliance and anomaly detection. Your task is to generate a set of *validation rules* for transaction analysis based on the given table structure from a *FINRA document*.
+
+    *Input:*
+    You will receive a *JSON structure* containing fields such as *'field name', **'description', and **'allowable values'* extracted from the document.
+    *Input JSON data:*
+    Document text: {text}
+
+    *Task:*
+    - Extract *relevant transaction rules* based on field relationships, logical dependencies, and standard financial risk/compliance practices.
+    - Generate *common rules* as well as *rules specific to the provided data*.
+    - Ensure that the output strictly follows this *JSON format*:
+
 
     The JSON must be formatted as follows:
     ```json
@@ -30,13 +40,8 @@ def extract_rules_from_pdf(pdf_file):
         "rule_2": "Description of rule 2",
         "rule_3": "Description of rule 3"
     }}
-    Rules:
-
-    Only return JSON. Do not include explanations or extra text.
-
-    Ensure the response starts and ends with curly braces.
-
-    Document text: {text} """
+    ```
+    """
 
     # Get rules from Ollama chat
     response = ollama.chat(model="deepseek-r1", messages=[{"role": "user", "content": prompt}])
@@ -49,9 +54,9 @@ def extract_rules_from_pdf(pdf_file):
         response_json = json.loads(raw_content)
     except json.JSONDecodeError:
         # Extract JSON using regex in case of extra text
-        match = re.search(r"\{.*\}", raw_content, re.DOTALL)
+        match = re.search(r"(\{[\s\S]*?\})", raw_content, re.IGNORECASE)
         if match:
-            json_text = match.group(0)
+            json_text = match.group(1)
             try:
                 response_json = json.loads(json_text)
             except json.JSONDecodeError:
@@ -63,9 +68,6 @@ def extract_rules_from_pdf(pdf_file):
 
     # Print the extracted JSON
     print("Extracted JSON:", json.dumps(response_json, indent=4))
-
-    # Save rules to a file
-    save_rules(response_json)
     return response_json
 
 def extract_text_from_pdf(pdf_path):
@@ -73,11 +75,6 @@ def extract_text_from_pdf(pdf_path):
     table_df = extract_table_from_page_range(pdf_path, start_page=58, end_page=60)
     table_json = convert_table_to_json(table_df)
     return table_json
-
-def save_rules(rules):
-    """Save rules to a JSON file."""
-    with open(RULES_FILE, "w") as f:
-        json.dump(rules, f, indent=4)
 
 def extract_table_from_page_range(pdf_path, start_page, end_page):
     extracted_data = []

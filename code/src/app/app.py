@@ -16,7 +16,7 @@ pdf_file = st.sidebar.file_uploader("Upload a PDF for Data Profiling", type=["pd
 if pdf_file and not st.session_state.get("rules_extracted", False):  # Prevent re-extraction
     with st.spinner("Extracting rules from PDF..."):
         st.session_state.rules = extract_rules.extract_rules_from_pdf(pdf_file)
-        update_rules.update_rules(st.session_state.rules)  # Persist extracted rules
+        update_rules.save_rules(st.session_state.rules)  # Persist extracted rules
         st.session_state.rules_extracted = True  # Mark that rules are extracted
         st.sidebar.success("✅ Rules extracted and saved!")
         st.sidebar.json(st.session_state.rules)
@@ -43,7 +43,7 @@ new_rule = st.sidebar.text_input("Enter a new rule to add")
 if st.sidebar.button("Save Rule") and new_rule:
     rule_id = f"rule_{len(st.session_state.rules) + 1}"
     st.session_state.rules[rule_id] = new_rule
-    update_rules.update_rules(st.session_state.rules)  # Persist rules
+    update_rules.update_rules(new_rule)  # Persist rules
     st.success("Rule added successfully!")
     st.sidebar.json(st.session_state.rules)
 
