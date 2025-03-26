@@ -77,7 +77,7 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
    ```
 3. Run the project  
    ```sh
-   cd code/src/app
+   cd /src/app
    streamlit run app.py
    ```
 
