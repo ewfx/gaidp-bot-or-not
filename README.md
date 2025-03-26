@@ -16,7 +16,7 @@
 In the banking sector, regulatory compliance demands rigorous validation of transaction data against complex rules—a process often bogged down by manual effort and human error. Our Data Profiling Gen AI project revolutionizes this workflow by automating rule extraction and anomaly detection.
 
 ## 🎥 Demo <a name="demo"></a>  
-📹 [Video Demo](https://reccloud.com/u/b5u5y1v) 
+📹 [Video Demo](https://github.com/ewfx/gaidp-bot-or-not/blob/main/artifacts/demo/BotOrNot.mp4)
 
 #### 🖼️ Screenshots of the Dashboard:
 ![image](https://github.com/user-attachments/assets/69420d46-f6c1-453f-bbb8-428b95f16401)
