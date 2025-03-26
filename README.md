@@ -20,7 +20,8 @@ In the banking sector, regulatory compliance demands rigorous validation of tran
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
-![Screenshot 1](link-to-image)
+![image](https://github.com/user-attachments/assets/4ff815e6-935a-46c0-bf93-c5738050b003)
+
 
 ## 💡 Inspiration <a name="inspiration"></a>
 In the banking sector, regulatory reporting demands meticulous compilation of vast data volumes to ensure compliance. Data profiling plays a pivotal role in this process, verifying that reported data adheres to strict regulatory guidelines. Traditionally, this task relies on manual efforts—profiling rules are painstakingly defined based on raw data and regulatory documents, a process that is time-consuming, error-prone, and inefficient.
