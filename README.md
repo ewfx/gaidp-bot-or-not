@@ -19,8 +19,12 @@ In the banking sector, regulatory compliance demands rigorous validation of tran
 📹 [Video Demo](https://github.com/ewfx/gaidp-bot-or-not/blob/main/artifacts/demo/BotOrNot.mp4)
 
 #### 🖼️ Screenshots of the Dashboard:
+
 ![image](https://github.com/user-attachments/assets/69420d46-f6c1-453f-bbb8-428b95f16401)
 
+![WhatsApp Image 2025-03-26 at 10 47 41 PM](https://github.com/user-attachments/assets/5e4de26e-5d14-451d-856f-27269427ee0e)
+
+![WhatsApp Image 2025-03-26 at 10 45 47 PM](https://github.com/user-attachments/assets/ae789127-5513-488f-99fa-9bbf26c001a4)
 
 #### 🖼️ Flow Diagram :
 ![image](https://github.com/user-attachments/assets/4ff815e6-935a-46c0-bf93-c5738050b003)
