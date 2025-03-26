@@ -16,8 +16,6 @@ def extract_rules_from_pdf(pdf_file):
 
     # Extract text from PDF
     text = extract_text_from_pdf(pdf_path)
-    print(text)
-    # text = str(text) if text else "" 
     
     prompt = f"""
     You are an expert in financial transaction compliance and anomaly detection. Your task is to generate a set of *validation rules* for transaction analysis based on the given table structure from a *FINRA document*.
@@ -28,6 +26,7 @@ def extract_rules_from_pdf(pdf_file):
     Document text: {text}
 
     *Task:*
+    - Extract atleast 10 rules from the given data or general rules.
     - Extract *relevant transaction rules* based on field relationships, logical dependencies, and standard financial risk/compliance practices.
     - Generate *common rules* as well as *rules specific to the provided data*.
     - Ensure that the output strictly follows this *JSON format*:
@@ -45,7 +44,6 @@ def extract_rules_from_pdf(pdf_file):
 
     # Get rules from Ollama chat
     response = ollama.chat(model="deepseek-r1", messages=[{"role": "user", "content": prompt}])
-    print(response['message']['content'])
     # Convert response to JSON format
     raw_content = response["message"]["content"].strip()
 
@@ -66,8 +64,6 @@ def extract_rules_from_pdf(pdf_file):
             print("❌ No JSON found in Ollama response")
             response_json = {}
 
-    # Print the extracted JSON
-    print("Extracted JSON:", json.dumps(response_json, indent=4))
     return response_json
 
 def extract_text_from_pdf(pdf_path):
