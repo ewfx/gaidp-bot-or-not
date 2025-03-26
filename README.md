@@ -90,7 +90,7 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
 - 🔹 Gen-AI: Deepseek-r1
 
 ## 👥 Team <a name="team"></a>
-- **Pulkit Gupta** - [GitHub](#)
+- **Pulkit Gupta** - [GitHub](https://github.com/Pulgit555)
 - **Sakshi Jain** - [GitHub](https://github.com/sakshijain009/)
 - **Madhurim Gupta** - [GitHub](#)
-- **Rudra Pujara** - [GitHub](#) 
+- **Rudra Pujara** - [GitHub](https://github.com/rpinversion) 
