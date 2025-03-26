@@ -91,6 +91,6 @@ Extracted rules needed precise translation into executable code (SQL, JSON, or v
 
 ## 👥 Team <a name="team"></a>
 - **Pulkit Gupta** - [GitHub](#)
-- **Sakshi Jain** - [GitHub](#)
+- **Sakshi Jain** - [GitHub](https://github.com/sakshijain009/)
 - **Madhurim Gupta** - [GitHub](#)
 - **Rudra Pujara** - [GitHub](#) 
